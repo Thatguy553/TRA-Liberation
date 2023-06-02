@@ -1,0 +1,3 @@
+TRA_garrisonStructures set [
+	""
+];

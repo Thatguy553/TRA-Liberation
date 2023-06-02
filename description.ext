@@ -1,0 +1,18 @@
+class CfgFunctions {
+    #include "UserInputMenus\CfgFunctions.cpp"
+    #include "CfgFunctions.hpp"
+};
+
+/* ConnorAU GUI mod */
+#include "UserInputMenus\systems\_macros.inc"
+#include "UserInputMenus\systems\_defines.inc"
+
+#include "UserInputMenus\controls.cpp"
+#include "UserInputMenus\systems\displayColorPicker.cpp"
+#include "UserInputMenus\systems\displayGuiMessage.cpp"
+#include "UserInputMenus\systems\displayListbox.cpp"
+#include "UserInputMenus\systems\displayListboxMulti.cpp"
+#include "UserInputMenus\systems\displayProgressBar.cpp"
+#include "UserInputMenus\systems\displaySlider.cpp"
+#include "UserInputMenus\systems\displayText.cpp"
+#include "UserInputMenus\systems\displayTextMulti.cpp"
