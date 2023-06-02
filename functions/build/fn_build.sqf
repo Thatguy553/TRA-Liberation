@@ -1,8 +1,39 @@
-/*
-_player should be the player unit building the structure.
-_objectType should be the class name of the object to be built.
-_fob should be the FOB variable name.
-*/
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_build
+
+Description:
+    Function will check if the fob it is called at has the resources to build the requested vehicle, then it 
+    will allow the user to change the objects rotation, height, and distance from himself before either placing or canceling.
+
+Controls:
+    UpArrow = Raise Height
+    DownArrow = Lower Height
+    LeftArrow = Rotate Left
+    RightArrow = Rotate Right
+
+    SpaceBar = Confirm Build
+    RightClick = Cancel Build
+
+    PgUp = Push Farther Away From You
+    PdDn = Bring Closer To You
+
+Parameters:
+    _player - The unit or object to attach to.
+    _objectType - The object to build's class.
+    _cost - An array of 3 ints, being [supply, ammo, fuel].
+    _fob - The variable name for the FOB being built at.
+
+Returns:
+    Nothing ATM.
+
+Examples:
+    (begin example)
+    [player, "B_Slingload_01_Cargo_F", [100, 0, 0], "fob_1_alpha"] call TRA_fnc_build;
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
 params["_player", "_objectType", "_cost", "_fob"];
 
 /* Check if the needed supplies exists at the current fob */

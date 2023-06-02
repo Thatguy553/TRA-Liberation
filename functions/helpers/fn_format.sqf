@@ -1,3 +1,29 @@
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_format
+
+Description:
+    Function will take in a string, and the size to format that string to.
+
+Parameters:
+    _string - String to Modify.
+	_size - Integer to determine what size to make _string. (can be bigger or smaller than _string, cannot be less than 0)
+
+Returns:
+    Modified String,
+
+Examples:
+    (begin example)
+    _str = ["I want this string to be 35 long"] call TRA_fnc_format;
+	// _str = "I want this string to be 35 long   "
+
+	_str = ["I want this string to be 5 long"] call TRA_fnc_format;
+	// _str = "I wan"
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
+
 params["_string", "_size"];
 
 if (typeName _string isNotEqualTo "STRING") then {
@@ -9,7 +35,7 @@ private _newStr = "";
 
 TRA_trim = {
 	params["_string", "_size"];
-	private _str = [_string, 0, _size] call CBA_fnc_substr;
+	private _str = [_string, 0, _size - 1] call CBA_fnc_substr;
 	_str
 };
 

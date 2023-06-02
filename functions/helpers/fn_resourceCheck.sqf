@@ -1,4 +1,30 @@
-/* both variables should be arrays in the format of [0,0,0] */
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_resourceCheck
+
+Description:
+    Function will take in two arrays of ints in the following format, [Supply, Ammo, Fuel].
+	It will compare these two arrays and return if array 2 is greater than or equal to array 1.
+
+Parameters:
+    _resources - The available resources array [100, 50, 0]
+	_cost - The required resources array [200, 10, 50]
+
+Returns:
+    Boolean
+
+Examples:
+    (begin example)
+    _bool = [[100, 10, 20], [50, 20, 10]] call TRA_fnc_resourceCheck;
+	// _bool = false
+
+	_bool = [[200, 1000, 300], [100, 50, 70]] call TRA_fnc_resourceCheck;
+	// _bool = true
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
+
 params["_resources", "_cost"];
 
 private _resSupply = _resources select 0;

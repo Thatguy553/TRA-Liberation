@@ -72,6 +72,14 @@ num = TRA_playerFobNames index.
 
 example:
 TRA_playerFobs set [
+	"fobs",
+	[
+		"fob_num_name",
+		"fob_num_name"
+	]
+]
+
+TRA_playerFobs set [
 	"fob_num_name",
 	[
 		["obj_class", [_positionInformation]]

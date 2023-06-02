@@ -6,6 +6,31 @@
 	if not then all infantry, vehicles, and structures created during zone activation are deleted.
 
 */
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_deactivateZone
+
+Description:
+    Function takes in the trigger for the zone to be deactivated as well as the marker for said zone.
+	The function will wait TRA_zoneInactiveTime seconds before it begins deactivating. If in this time the zone is reactivated via
+	player re-entering the trigger, the Deactivation is aborted. If a player does not re enter the trigger all units spawned for that
+	zone will be deleted, removed from the TRA_activeAi count, and removed from TRA_zonesActive.
+
+Parameters:
+    _trigger - Trigger Object
+	_marker - marker name
+
+Returns:
+    Boolean
+
+Examples:
+    (begin example)
+	[_trigger, "zone_marker"] call TRA_fnc_resourceCheck;
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
+
 
 params ["_trigger", "_marker"];
 private ["_timerStart", "_deactivate"];

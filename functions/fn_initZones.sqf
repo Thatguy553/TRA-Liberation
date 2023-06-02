@@ -1,17 +1,31 @@
-/*
-fn_initZones.sqf
-TRA_fnc_initZones
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_initZones
 
-Should sort through the TRA_Markers array and create triggers for each marker depending on its type.
+Description:
+    Function initiate's all zones on the map according to the following markers.
+	Initation includes sorting through all markers on the map, then creating triggers
+	for each of these map markers based on zone configs.
 
-_village == "n_art"
-_bigtown == "n_service"
-_tower == "loc_Transmitter"
-_factory == "loc_Fuelstation"
-_military == "o_support"
+	_village == "n_art"
+	_bigtown == "n_service"
+	_tower == "loc_Transmitter"
+	_factory == "loc_Fuelstation"
+	_military == "o_support"
 
-*/
+Parameters:
+    None
 
+Returns:
+    Nothing
+
+Examples:
+    (begin example)
+	[] call TRA_fnc_initZones;
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
 private ["_military", "_factory", "_bigtown", "_tower", "_village"];
 
 _military = [];
@@ -23,22 +37,27 @@ _village =  [];
 {
 	if ((getMarkerType _x) isEqualTo "o_support" && !((getMarkerType _x) in TRA_capturedZones)) then {
 		_military pushBack _x;
+		continue
 	};
 
 	if ((getMarkerType _x) isEqualTo "loc_Fuelstation" && !((getMarkerType _x) in TRA_capturedZones)) then {
 		_factory pushBack _x;
+		continue
 	};
 
 	if ((getMarkerType _x) isEqualTo "n_service" && !((getMarkerType _x) in TRA_capturedZones)) then {
 		_bigtown pushBack _x;
+		continue
 	};
 
 	if ((getMarkerType _x) isEqualTo "loc_Transmitter" && !((getMarkerType _x) in TRA_capturedZones)) then {
 		_tower pushBack _x;
+		continue
 	};
 
 	if ((getMarkerType _x) isEqualTo "n_art" && !((getMarkerType _x) in TRA_capturedZones)) then {
 		_village pushBack _x;
+		continue
 	};
 } forEach TRA_Markers;
 

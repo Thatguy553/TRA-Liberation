@@ -1,3 +1,38 @@
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_buildFob
+
+Description:
+    Function will allow the user to place a new HQ at a location, height, and rotation of their choosing similar to
+    TRA_fnc_build.
+
+Controls:
+    UpArrow = Raise Height
+    DownArrow = Lower Height
+    LeftArrow = Rotate Left
+    RightArrow = Rotate Right
+
+    SpaceBar = Confirm Build
+    RightClick = Cancel Build
+
+    PgUp = Push Farther Away From You
+    PdDn = Bring Closer To You
+
+Parameters:
+    _player - The unit or object to attach to.
+    _container - The object that should "contain" the HQ. (Will be deleted, and if build cancel re added.)
+
+Returns:
+    Nothing ATM.
+
+Examples:
+    (begin example)
+    [player, _containerObject] call TRA_fnc_buildFOB;
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
+
 params["_player", "_container"];
 
 /* Create Provided Object */
@@ -41,7 +76,7 @@ TRA_rotateFOB = {
         systemChat "Fob object was not set as a missionNamespace variable";
         false;
     };
-    
+
     /* Free other keys */
     if !(_key in [203, 205, 200, 208, 57, 201, 209]) exitWith {
         false
@@ -88,12 +123,13 @@ TRA_rotateFOB = {
             (findDisplay 46) displayRemoveEventHandler ["MouseButtonDown", TRA_fobCancelDisplayID];
             detach TRA_fobObject;
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
-            _fobNum = count(TRA_playerFobs);
+            _fobs = TRA_playerFobs get "fobs";
+            _fobNum = count(_fobs);
             _fobVarName = format["%1_%2_%3", toLower TRA_playerFobPrefix, _fobNum, toLower (TRA_playerFobNames select _fobNum)];
             TRA_fobObject setVehicleVarName _fobVarName;
             TRA_playerFobs set [
-                _fobVarName,
-                []
+                "fobs",
+                _fobs pushBack _fobVarName
             ];
             TRA_fobSuccess = true;
 

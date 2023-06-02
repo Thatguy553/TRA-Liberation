@@ -1,3 +1,29 @@
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_buildMenu
+
+Description:
+    Function will open a set of CAU_UserInputMenus for the user to select the type of vehicle, and a specific
+	vehicle to build. Once selected these menus will call TRA_fnc_build with the necessary information.
+
+Controls:
+    No controls, point and click on GUI.
+
+Parameters:
+    _player - The unit or object to open for.
+    _fob - The variable name for the FOB being built at.
+
+Returns:
+    Nothing ATM.
+
+Examples:
+    (begin example)
+    [player, "fob_1_alpha"] call TRA_fnc_buildMenu;
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
+
 // params["_player", "_fob"];
 params["_player"];
 private _fob = "";

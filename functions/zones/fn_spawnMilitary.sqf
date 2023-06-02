@@ -1,3 +1,28 @@
+/* ----------------------------------------------------------------------------
+Function: TRA_fnc_spawnMilitary
+
+Description:
+    Function takes in the trigger for the zone to be activated as well as the marker for said zone.
+	The function does some calculations based on the Zone Configs for ai to determine how many ai
+	to spawn, and determine how many ai should be doing certain things (garrison, patrol, etc).
+
+	After spawning the units, it adds the zone to TRA_zonesActive and adds the number of units to TRA_activeAi
+
+Parameters:
+    _trigger - Trigger Object
+	_marker - marker name
+
+Returns:
+    Nothing
+
+Examples:
+    (begin example)
+	[_trigger, "zone_marker"] call TRA_fnc_resourceCheck;
+    (end)
+
+Author:
+    Thatguy553
+---------------------------------------------------------------------------- */
 params ["_trigger", "_marker"];
 diag_log format["[TRA] Activating Military Zone: %1", markerText _marker];
 

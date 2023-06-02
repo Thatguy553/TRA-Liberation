@@ -13,9 +13,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={22053.008,57.967171,4994.6758};
-		dir[]={-0.7832765,-0.22943145,0.57778835};
-		up[]={-0.18463337,0.97332484,0.13619587};
-		aside[]={0.59362334,-7.4505806e-009,0.80474317};
+		dir[]={-0.80215728,-0.32223314,0.50272214};
+		up[]={-0.27304748,0.94666016,0.1711223};
+		aside[]={0.53104746,-2.1685992e-007,0.84735268};
 	};
 };
 binarizationWanted=0;
@@ -1818,7 +1818,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [ " \n " ""Deploy FOB"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_buildFob; " \n " } " \n "];" \n "this addAction [ " \n " ""Open Build Menu"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_buildMenu; " \n " } " \n "];";
+				init="this addAction [ " \n " ""Deploy FOB"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller, _target] call TRA_fnc_buildFob; " \n " } " \n "];" \n "this addAction [ " \n " ""Open Build Menu"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_buildMenu; " \n " } " \n "];";
 			};
 			id=519;
 			type="B_Slingload_01_Cargo_F";
