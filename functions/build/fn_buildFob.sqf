@@ -43,18 +43,20 @@ TRA_rotateFOB = {
     };
     
     /* Free other keys */
-    if !(_key in [203, 205, 200, 208, 57]) exitWith {
+    if !(_key in [203, 205, 200, 208, 57, 201, 209]) exitWith {
         false
     };
 
     private _rotation = TRA_fobRotation;
 	private _height = TRA_fobHeight;
+    private _distance = TRA_fobBuildDist;
     private _rotate = false;
     private _elevate = false;
-    private _distance = TRA_fobBuildDist;
+    private _dist = false;
 
-    private _rotateIncrement = 1;
-	private _elevateIncrement = 0.2;
+    private _rotateIncrement = (parseNumber TRA_buildRotIncrement);
+	private _elevateIncrement = (parseNumber TRA_buildElevationIncrement);
+    private _distanceIncrement = (parseNumber TRA_buildDistIncrement);
 
     switch (_key) do {
         case 203: {
@@ -73,6 +75,14 @@ TRA_rotateFOB = {
 			_height = _height - _elevateIncrement;
             _elevate = true;
 		};
+        case 201: {
+            _distance = _distance + _distanceIncrement;
+            _dist = true;
+        };
+        case 209: {
+            _distance = _distance - _distanceIncrement;
+            _dist = true;
+        };
         case 57: {
             (findDisplay 46) displayRemoveEventHandler ["KeyDown", _thisEventHandler];
             (findDisplay 46) displayRemoveEventHandler ["MouseButtonDown", TRA_fobCancelDisplayID];
@@ -96,12 +106,19 @@ TRA_rotateFOB = {
     };
     if (_elevate) then {
         _player = attachedTo TRA_fobObject;
-        TRA_fobObject attachTo [_player, [0, TRA_fobBuildDist, TRA_fobHeight]];
+        TRA_fobObject attachTo [_player, [0, _distance, _height]];
         TRA_fobObject setDir TRA_fobRotation;
+    };
+    if (_dist) then {
+        _player = attachedTo TRA_fobObject;
+        TRA_fobObject attachTo [_player, [0, _distance, _height]];
+        TRA_fobObject setDir TRA_fobRotation;
+        
     };
 
     TRA_fobRotation = _rotation;
 	TRA_fobHeight = _height;
+    TRA_fobBuildDist = _distance;
 
     true
 };
@@ -118,7 +135,7 @@ TRA_cancelRotation = {
     deleteVehicle TRA_fobObject;
     (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
     TRA_fobSuccess = false;
-    ["TaskFailed", ["", "Object build canceled!"]] call BIS_fnc_showNotification;
+    ["TaskFailed", ["", "Building FOB Canceled"]] call BIS_fnc_showNotification;
 
     false
 };
