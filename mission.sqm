@@ -8,14 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=606;
+		nextID=608;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class Camera
 	{
-		pos[]={22053.008,57.967171,4994.6758};
-		dir[]={-0.80215728,-0.32223314,0.50272214};
-		up[]={-0.27304748,0.94666016,0.1711223};
-		aside[]={0.53104746,-2.1685992e-007,0.84735268};
+		pos[]={22040.889,57.967171,5002.269};
+		dir[]={-0.8021493,-0.32222995,0.5027172};
+		up[]={-0.27304009,0.94666135,0.17111769};
+		aside[]={0.53104222,0,0.84734541};
 	};
 };
 binarizationWanted=0;
@@ -70,11 +74,54 @@ randomSeed=13897494;
 class ScenarioData
 {
 	author="Thatguy553";
+	respawn=3;
+	respawnDelay=5;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="MenuPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="TRA Liberation";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -95,7 +142,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=152;
+		items=153;
 		class Item0
 		{
 			dataType="Marker";
@@ -1840,6 +1887,15 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item152
+		{
+			dataType="Marker";
+			position[]={22015.914,26.002001,5024.0439};
+			name="respawn_west";
+			type="Empty";
+			id=607;
+			atlOffset=0.00036621094;
 		};
 	};
 };

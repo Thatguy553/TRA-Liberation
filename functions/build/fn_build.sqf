@@ -139,6 +139,7 @@ TRA_rotateObject = {
             (findDisplay 46) displayRemoveEventHandler ["MouseButtonDown", TRA_cancelDisplayID];
             detach TRA_buildObject;
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
+            [TRA_buildObject] call TRA_fnc_addCurators;
             TRA_buildSuccess = true;
             ["TaskSucceeded", ["", format["%1 Built!", TRA_objectName]]] call BIS_fnc_showNotification;
         };

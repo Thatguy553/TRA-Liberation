@@ -10,3 +10,5 @@ params ["_units"];
 	_x enableMimics true;
 	_x enableStamina true;
 } forEach _units;
+
+[_units] call TRA_fnc_addCurators;

@@ -131,6 +131,7 @@ TRA_rotateFOB = {
                 "fobs",
                 _fobs pushBack _fobVarName
             ];
+            [TRA_fobObject] call TRA_fnc_addCurators;
             TRA_fobSuccess = true;
 
             ["TaskSucceeded", ["", format["%1 %2 Built!", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)]]] remoteExec ["BIS_fnc_showNotification", 0];

@@ -12,6 +12,9 @@ tower_
 // Variable Initialization
 TRA_Markers = allMapMarkers;
 
+/* Whitelist to give Curator and Administration Permissions */
+TRA_whitelist = ["76561198201550691"];
+
 /* Military Configs */
 TRA_milActivationRadius = 1000;
 TRA_milCaptureRadius = 175;
@@ -66,34 +69,34 @@ TRA_playerVehicles = createHashMap;
 TRA_garrisonStructures = createHashMap;
 
 /* Player FOB's hashmap
-Doing 'fob_num_name' so that I can basically substring the 'num' out.
-Getting the num out is how ill later determine what the fob name is when loading the map.
-num = TRA_playerFobNames index.
+	Doing 'fob_num_name' so that I can basically substring the 'num' out.
+	Getting the num out is how ill later determine what the fob name is when loading the map.
+	num = TRA_playerFobNames index.
 
-example:
-TRA_playerFobs set [
-	"fobs",
-	[
+	example:
+	TRA_playerFobs set [
+		"fobs",
+		[
+			"fob_num_name",
+			"fob_num_name"
+		]
+	]
+
+	TRA_playerFobs set [
 		"fob_num_name",
-		"fob_num_name"
-	]
-]
+		[
+			["obj_class", [_positionInformation]]
+		]
+	];
 
-TRA_playerFobs set [
-	"fob_num_name",
-	[
-		["obj_class", [_positionInformation]]
+	TRA_playerResourcesset [
+		"fob_num_name",
+		[
+			[supply, ammo, fuel]
+		]
 	]
-];
-
-TRA_playerResourcesset [
-	"fob_num_name",
-	[
-		[supply, ammo, fuel]
-	]
-]
 */
 TRA_playerFobs = createHashMap;
 TRA_playerResources = createHashMap;
 TRA_playerFobPrefix = "FOB";
-TRA_playerFobNames = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"]
+TRA_playerFobNames = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];

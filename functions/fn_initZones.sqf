@@ -26,6 +26,8 @@ Examples:
 Author:
     Thatguy553
 ---------------------------------------------------------------------------- */
+// if (!isServer) exitWith {};
+diag_log format["[TRA] Initiating %1 zones!", count(TRA_Markers)];
 private ["_military", "_factory", "_bigtown", "_tower", "_village"];
 
 _military = [];
