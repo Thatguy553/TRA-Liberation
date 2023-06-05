@@ -10,8 +10,6 @@ tower_
 
 */
 
-TRA_fobObj = FOB
-
 // Variable Initialization
 TRA_Markers = allMapMarkers;
 
@@ -76,12 +74,14 @@ TRA_garrisonStructures = createHashMap;
 	Getting the num out is how ill later determine what the fob name is when loading the map.
 	num = TRA_playerFobNames index.
 
+	Will need to make exceptions for the operation base
+
 	example:
 	TRA_playerFobs set [
 		"fobs",
 		[
-			"fob_num_name",
-			"fob_num_name"
+			["fob_num_name", fob_object],
+			["fob_num_name", fob_object]
 		]
 	]
 
@@ -112,3 +112,10 @@ TRA_vehicleParaOpenHeight = 500;
 
 
 
+/* Temporary Code Placement */
+private _fobs = TRA_playerFobs getOrDefault ["fobs", []];
+_fobs pushBack ["operation_base", operation_base];
+TRA_playerFobs set [
+	"fobs",
+	_fobs
+];

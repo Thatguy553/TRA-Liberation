@@ -1,4 +1,3 @@
-#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 class HaloJumpGui
 {
 	idd = 5533;

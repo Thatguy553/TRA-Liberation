@@ -1,3 +1,24 @@
+author			= "Thatguy553";
+onLoadName		= "TRA Liberation";
+onLoadMission	= "Liberate or Die";
+loadScreen		= "";
+
+class Header
+{
+	gameType =  CTI;	// Game type
+	// minPlayers =  1;	// minimum number of players the mission supports
+	// maxPlayers = 10;	// maximum number of players the mission supports
+};
+
+// Respawn Settings
+respawn = "BASE";
+respawnButton = 1;
+respawnDelay = 0;
+respawnDialog = 1;
+respawnOnStart = 1;
+respawnTemplates[] = { "TraRedeploy" };
+
+
 class Extended_PreInit_EventHandlers {
         init = "call compile preprocessFileLineNumbers 'XEH_preInit.sqf'";
 };
@@ -19,6 +40,34 @@ class CfgSounds
     }
 }; 
 
+/* Custom Respawn Template */
+class CfgRespawnTemplates
+{
+	// class used in respawnTemplates entry
+	class TraRedeploy
+	{
+		// function or script executed upon death
+		// parameters passed into it are the same as are passed into onPlayerKilled.sqf file
+		onPlayerKilled = "";
+
+		// function or script executed upon respawn
+		// parameters passed into it are the same as are passed into onPlayerRespawn.sqf file
+		onPlayerRespawn = "TRA_fnc_redeployMenu";
+
+		// default respawn delay
+		// can be overwitten by description.ext attribute of the same name
+		respawnDelay = 0;
+
+		// see respawnOnStart for description and limitations
+		// can be overridden by description.ext attribute of the same name
+		respawnOnStart = 1;
+	};
+
+	class Spectator
+	{
+		onPlayerRespawn = "BIS_fnc_respawnSpectator"; // a function can be used instead of a script
+	};
+};
 
 /* ConnorAU GUI mod */
 #include "UserInputMenus\systems\_macros.inc"
@@ -34,9 +83,15 @@ class CfgSounds
 #include "UserInputMenus\systems\displayText.cpp"
 #include "UserInputMenus\systems\displayTextMulti.cpp"
 
+/* Default A3 Defines */
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+
 /* Custom Halo Jump Configs */
-#include "ui\mapDefines.hpp"
-#include "ui\mapControls.hpp"
+#include "ui\defines.hpp"
+#include "ui\haloJumpGui.hpp"
 
 /* Custom Notifications */
 #include "ui\CfgNotifications.hpp"
+
+/* Custom Redeploy GUI */
+#include "ui\redeployGui.hpp"

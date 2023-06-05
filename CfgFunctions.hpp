@@ -2,14 +2,16 @@ class TRA {
 	class functions {
 		file = "functions";
 
-		class initZones 		{};
+		class initZones 			{};
 	};
 	class functions_fob{
 		file = "functions\fob";
 		
-		class addActions			{};
+		class addActionsFob			{};
 		class addResources			{};
 		class removeResources		{};
+		class deployFobs			{};
+		class deployMarkers			{};
 	};
 	class functions_zones {
 		file = "functions\zones";
@@ -55,9 +57,18 @@ class TRA {
 	class functions_misc {
 		file = "functions\misc";
 
-		class haloMenu			{};
-		class haloJump			{};
-		class heal				{};
+		class haloMenu				{};
+		class haloJump				{};
+		class heal					{};
+		class redeployMenu			{};
+		class redeploy				{};
 	};
+
+	class persistence {
+		file = "functions\persistence";
+
+		class load					{};
+		class save					{};
+	}
 };
 

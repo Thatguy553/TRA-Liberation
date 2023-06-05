@@ -119,18 +119,34 @@ TRA_rotateFOB = {
             _dist = true;
         };
         case 57: {
+            // Remove Event Handlers
             (findDisplay 46) displayRemoveEventHandler ["KeyDown", _thisEventHandler];
             (findDisplay 46) displayRemoveEventHandler ["MouseButtonDown", TRA_fobCancelDisplayID];
+
+            // Detach the fob object from the player
             detach TRA_fobObject;
+
+            // Close the controls popup
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
+            
+            // Add fob to the list of fobs and generate the new fob name
             _fobs = TRA_playerFobs get "fobs";
-            _fobNum = count(_fobs);
+            /* Minus one because of Operations Base */
+            _fobNum = count(_fobs) - 1;
             _fobVarName = format["%1_%2_%3", toLower TRA_playerFobPrefix, _fobNum, toLower (TRA_playerFobNames select _fobNum)];
+            _fobMarkerName = format["%1_marker", _fobVarName];
+            createMarker [_fobMarkerName, position TRA_fobObject, 0];
+            _fobMarkerName setMarkerTypeLocal "b_hq";
+            _fobMarkerName setMarkerColorLocal "ColorWEST";
+            _fobMarkerName setMarkerText format["%1 %2", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)];
             TRA_fobObject setVehicleVarName _fobVarName;
+            _fobs pushBack [[_fobVarName, TRA_fobObject]];
             TRA_playerFobs set [
                 "fobs",
-                _fobs pushBack _fobVarName
+                _fobs
             ];
+
+            // Add FOB object to zeus and signal success
             [TRA_fobObject] call TRA_fnc_addCurators;
             TRA_fobSuccess = true;
 
