@@ -45,7 +45,7 @@ class HaloJumpGui
 
 
 			colorBackground[] = {0,0,0,0.7};
-			onButtonClick= "closeDialog 1;[player, uiNamespace getVariable ['TRA_haloCoords', getPosATL player]] spawn TRA_fnc_haloJump;";
+			onButtonClick= "closeDialog 1;[player, uiNamespace getVariable ['TRA_haloCoords', [0,0,0]]] spawn TRA_fnc_haloJump;";
 		};
 		class buttonCancelHalo: RscButton
 		{

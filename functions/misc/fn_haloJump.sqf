@@ -1,5 +1,9 @@
 params["_player", "_position"];
+
 private _jumpDelay = 3; // Seconds
+if (_position isEqualTo [0,0,0]) exitWith {
+	systemChat "No Jump coords marked...";
+};
 
 ["HaloJumping", [format["Halo Jumping! Please wait %1 seconds...", _jumpDelay]]] call BIS_fnc_showNotification;
 sleep _jumpDelay;

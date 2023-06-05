@@ -22,8 +22,7 @@ private _ctrlMap = _display ctrlCreate ["RscMapControl", -1];
 _ctrlMap ctrlMapSetPosition [0.276875 * safezoneW + safezoneX, 0.234 * safezoneH + safezoneY, 0.44625 * safezoneW, 0.476 * safezoneH]; // effect is immediate 
 
 /* Coords array to pass */
-private _defaultCoords = getPosATL _player;
-uiNamespace setVariable["TRA_haloCoords", [_defaultCoords select 0, _defaultCoords select 1, TRA_haloJumpHeight]];
+uiNamespace setVariable["TRA_haloCoords", [0, 0, 0]];
 
 _ctrlMap ctrlAddEventHandler['MouseButtonClick', {
 	params[ "_map", "_button", "_mouseX", "_mouseY" ];
@@ -31,5 +30,5 @@ _ctrlMap ctrlAddEventHandler['MouseButtonClick', {
 	private _worldX = _worldCoords select 0;
 	private _worldY = _worldCoords select 1;
 
-	TRA_haloCoords = [_worldX, _worldY, TRA_haloJumpHeight];
-}]
+	uiNamespace setVariable["TRA_haloCoords", [_worldX, _worldY, TRA_haloJumpHeight]];
+}];
