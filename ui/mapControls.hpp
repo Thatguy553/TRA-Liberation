@@ -1,3 +1,4 @@
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 class HaloJumpGui
 {
 	idd = 5533;
@@ -35,7 +36,11 @@ class HaloJumpGui
 			y = 0.164 * safezoneH + safezoneY;
 			w = 0.1575 * safezoneW;
 			h = 0.07 * safezoneH;
+			align = "CENTER";
+			style = 0x02;
+			valign = "top";
 			tooltip = "Click anywhere on the map to Halo Jump!"; //--- ToDo: Localize;
+			sizeEx = 2 * GUI_GRID_H;
 		};
 		class buttonHalo: RscButton
 		{
@@ -68,7 +73,7 @@ class HaloJumpGui
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 
-			onCheckedChanged = "uiNamespace setVariable['TRA_haloSquad', _this select 1];"
+			onCheckedChanged = "uiNamespace setVariable['TRA_haloSquadBool', _this select 1];"
 		};
 		class chkBoxOneText: RscText
 		{
@@ -88,7 +93,19 @@ class HaloJumpGui
 			y = 0.78 * safezoneH + safezoneY;
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
-			onCheckedChanged = "uiNamespace setVariable['TRA_haloVehicle', _this select 1];"
+			
+			onCheckedChanged = "uiNamespace setVariable['TRA_haloVehicleBool', _this select 1];"
+		};
+		class chkBoxTwoText: RscText
+		{
+			idc = 1001;
+			text = "Bring Vehicle With"; //--- ToDo: Localize;
+			x = 0.480312 * safezoneW + safezoneX;
+			y = 0.780 * safezoneH + safezoneY;
+			w = 0.065625 * safezoneW;
+			h = 0.028 * safezoneH;
+			tooltip = "Check this box to bring the vehicle you are in with you in the halo"; //--- ToDo: Localize;
+			sizeEx = 0.7 * GUI_GRID_H;
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END
