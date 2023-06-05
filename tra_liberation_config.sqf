@@ -104,3 +104,4 @@ TRA_playerFobNames = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "
 /* Halo Jump Height (meters)*/
 TRA_haloJumpHeight = 1000;
 TRA_haloJumpCooldown = 300;
+TRA_vehicleParaOpenHeight = 500;
