@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=608;
+		nextID=610;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22021.961,67.188484,5007.103};
-		dir[]={-0.26477784,-0.68844318,0.67523235};
-		up[]={-0.25132626,0.72529024,0.64092833};
-		aside[]={0.93098217,0,0.36506462};
+		pos[]={22026.055,37.061031,5020.6138};
+		dir[]={-0.93720376,-0.29603565,0.18442331};
+		up[]={-0.29046533,0.95517695,0.057157878};
+		aside[]={0.19307767,0,0.98118353};
 	};
 };
 binarizationWanted=0;
@@ -29,13 +29,14 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Characters_F",
 	"A3_Supplies_F_Heli_Slingload",
-	"ace_cargo"
+	"ace_cargo",
+	"UK3CB_Factions_ANA_B"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -64,11 +65,19 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
+		class Item4
+		{
+			className="UK3CB_Factions_ANA";
+			name="3CB Factions - ANA";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
 	};
 };
 dlcs[]=
 {
-	"Heli"
+	"Heli",
+	"RHS_USAF"
 };
 randomSeed=13897494;
 class ScenarioData
@@ -142,7 +151,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=153;
+		items=154;
 		class Item0
 		{
 			dataType="Marker";
@@ -1896,6 +1905,25 @@ class Mission
 			type="Empty";
 			id=607;
 			atlOffset=0.00036621094;
+		};
+		class Item153
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={22011.652,28.197762,5024.5146};
+				angles[]={0.0093286335,0,6.2086577};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=609;
+			type="UK3CB_ANA_B_M1151";
 		};
 	};
 };
