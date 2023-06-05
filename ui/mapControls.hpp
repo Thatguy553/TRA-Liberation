@@ -57,7 +57,7 @@ class HaloJumpGui
 			y = 0.752 * safezoneH + safezoneY;
 			w = 0.137812 * safezoneW;
 			h = 0.056 * safezoneH;
-
+      
 			onButtonClick = "closeDialog 2;";
 		};
 		class bringSquadChkBox: RscCheckbox

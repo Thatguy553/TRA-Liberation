@@ -2,7 +2,7 @@ params["_player"];
 private _lastHaloTime = _player getVariable ['TRA_lastHalo', diag_tickTime - 500];
 private _timeSinceLastHalo = diag_tickTime - _lastHaloTime;
 if (_timeSinceLastHalo <= TRA_haloJumpCooldown) exitWith {
-	["HaloCooldown", [format["Halo jumping is on cooldown... please wait %1 more seconds!", TRA_haloJumpCooldown - _timeSinceLastHalo]]] call BIS_fnc_showNotification;
+	["HaloCooldown", [format["Halo jumping is on cooldown... please wait %1 more minutes!", round((TRA_haloJumpCooldown - _timeSinceLastHalo) / 60)]]] call BIS_fnc_showNotification;
 };
 
 /* Open Display */
