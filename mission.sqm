@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=609;
+		nextID=608;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=1;
 	};
 	class Camera
 	{
-		pos[]={22040.889,57.967171,5002.269};
-		dir[]={-0.8021493,-0.32222995,0.5027172};
-		up[]={-0.27304009,0.94666135,0.17111769};
-		aside[]={0.53104222,0,0.84734541};
+		pos[]={22021.961,67.188484,5007.103};
+		dir[]={-0.26477784,-0.68844318,0.67523235};
+		up[]={-0.25132626,0.72529024,0.64092833};
+		aside[]={0.93098217,0,0.36506462};
 	};
 };
 binarizationWanted=0;
-sourceName="tra_liberation";
+sourceName="TRA_Liberation";
 addons[]=
 {
 	"A3_Ui_F",
@@ -1865,7 +1865,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [ " \n " ""Deploy FOB"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller, _target] call TRA_fnc_buildFob; " \n " } " \n "];" \n "this addAction [ " \n " ""Open Build Menu"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_buildMenu; " \n " } " \n "];" \n "this addAction [ " \n " ""Halo Jump"", " \n " { " \n "  params [""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_haloMenu; " \n " } " \n "];";
+				name="FOB";
 			};
 			id=519;
 			type="B_Slingload_01_Cargo_F";

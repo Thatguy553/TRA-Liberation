@@ -5,3 +5,9 @@
 // Init Zones
 [] call TRA_fnc_initZones;
 // [] call TRA_fnc_addCurators;
+
+// Init addActions 
+
+[player, TRA_playerFobPrefix] call TRA_fnc_addActions;
+
+
