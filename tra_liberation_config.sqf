@@ -1,5 +1,6 @@
 /*
 
+
 // Different Types of zones:
 military_
 factory_
@@ -8,6 +9,8 @@ bigtown_
 tower_
 
 */
+
+TRA_fobObj = FOB
 
 // Variable Initialization
 TRA_Markers = allMapMarkers;
