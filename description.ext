@@ -7,6 +7,18 @@ class CfgFunctions {
     #include "CfgFunctions.hpp"
 };
 
+class CfgSounds 
+{
+    sounds[] = {};
+
+    class FlyBy
+    {
+        name     = "FlyBy";
+        sound[]  = {"res\flyby.ogg", 1, 1};
+        titles[] = {};
+    }
+}; 
+
 
 /* ConnorAU GUI mod */
 #include "UserInputMenus\systems\_macros.inc"
@@ -21,3 +33,10 @@ class CfgFunctions {
 #include "UserInputMenus\systems\displaySlider.cpp"
 #include "UserInputMenus\systems\displayText.cpp"
 #include "UserInputMenus\systems\displayTextMulti.cpp"
+
+/* Custom Halo Jump Configs */
+#include "ui\mapDefines.hpp"
+#include "ui\mapControls.hpp"
+
+/* Custom Notifications */
+#include "ui\CfgNotifications.hpp"

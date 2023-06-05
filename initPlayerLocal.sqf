@@ -7,3 +7,4 @@ _player addEventHandler ["Respawn", {
 		[_unit] call TRA_fnc_addCurators;
 	};
 }];
+

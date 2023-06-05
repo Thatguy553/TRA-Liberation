@@ -1865,7 +1865,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [ " \n " ""Deploy FOB"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller, _target] call TRA_fnc_buildFob; " \n " } " \n "];" \n "this addAction [ " \n " ""Open Build Menu"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_buildMenu; " \n " } " \n "];";
+				init="this addAction [ " \n " ""Deploy FOB"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller, _target] call TRA_fnc_buildFob; " \n " } " \n "];" \n "this addAction [ " \n " ""Open Build Menu"", " \n " { " \n "  params[""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_buildMenu; " \n " } " \n "];" \n "this addAction [ " \n " ""Halo Jump"", " \n " { " \n "  params [""_target"", ""_caller""]; " \n "  [_caller] call TRA_fnc_haloMenu; " \n " } " \n "];";
 			};
 			id=519;
 			type="B_Slingload_01_Cargo_F";

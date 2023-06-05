@@ -141,7 +141,7 @@ TRA_rotateObject = {
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
             [TRA_buildObject] call TRA_fnc_addCurators;
             TRA_buildSuccess = true;
-            ["TaskSucceeded", ["", format["%1 Built!", TRA_objectName]]] call BIS_fnc_showNotification;
+            ["BuildSuccess", [format["%1 Built!", TRA_objectName]]] call BIS_fnc_showNotification;
         };
     };
 
@@ -177,7 +177,7 @@ TRA_cancelRotation = {
     deleteVehicle TRA_buildObject;
     (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
     TRA_buildSuccess = false;
-    ["TaskFailed", ["", format["%1 build canceled!", TRA_objectName]]] call BIS_fnc_showNotification;
+    ["BuildCanceled", [format["%1 build canceled!", TRA_objectName]]] call BIS_fnc_showNotification;
 
     (findDisplay 46) displayRemoveEventHandler ["KeyDown", TRA_buildDisplayID];
     (findDisplay 46) displayRemoveEventHandler ["MouseButtonDown", _thisEventHandler];

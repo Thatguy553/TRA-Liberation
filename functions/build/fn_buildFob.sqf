@@ -134,7 +134,7 @@ TRA_rotateFOB = {
             [TRA_fobObject] call TRA_fnc_addCurators;
             TRA_fobSuccess = true;
 
-            ["TaskSucceeded", ["", format["%1 %2 Built!", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)]]] remoteExec ["BIS_fnc_showNotification", 0];
+            ["BuildSuccess", [format["%1 %2 Built!", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)]]] remoteExec ["BIS_fnc_showNotification", 0];
         };
     };
 
@@ -172,7 +172,7 @@ TRA_cancelRotation = {
     deleteVehicle TRA_fobObject;
     (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
     TRA_fobSuccess = false;
-    ["TaskFailed", ["", "Building FOB Canceled"]] call BIS_fnc_showNotification;
+    ["BuildCanceled", ["Building FOB Canceled"]] call BIS_fnc_showNotification;
 
     false
 };
@@ -184,12 +184,3 @@ TRA_cancelRotation = {
 
 /* Return whether build was a success or failure after KeyDown eh is removed */
 // TRA_fobSuccess;
-
-
-// this addAction [
-// 	"Deploy FOB",
-// 	{
-// 		params["_target", "_caller"];
-// 		[_caller] call TRA_fnc_buildFob;
-// 	}
-// ];

@@ -44,6 +44,14 @@ class TRA {
 		class checkWhitelist		{};
 		class addCurators			{}
 		class addCuratorObjects		{};
-	}
+	};
+
+	class functions_misc {
+		file = "functions\misc";
+
+		class haloMenu			{};
+		class haloJump			{};
+		class heal				{};
+	};
 };
 

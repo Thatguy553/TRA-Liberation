@@ -100,3 +100,7 @@ TRA_playerFobs = createHashMap;
 TRA_playerResources = createHashMap;
 TRA_playerFobPrefix = "FOB";
 TRA_playerFobNames = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
+
+/* Halo Jump Height (meters)*/
+TRA_haloJumpHeight = 1000;
+TRA_haloJumpCooldown = 300;
