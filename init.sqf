@@ -5,3 +5,10 @@
 // Init Zones
 [] call TRA_fnc_initZones;
 // [] call TRA_fnc_addCurators;
+
+// Init addActions 
+
+[TRA_fobObj] call TRA_fnc_addActions;
+
+
+

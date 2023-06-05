@@ -1,5 +1,6 @@
 /*
 
+
 // Different Types of zones:
 military_
 factory_
@@ -8,6 +9,8 @@ bigtown_
 tower_
 
 */
+
+TRA_fobObj = FOB
 
 // Variable Initialization
 TRA_Markers = allMapMarkers;
@@ -105,3 +108,7 @@ TRA_playerFobNames = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "
 TRA_haloJumpHeight = 1000;
 TRA_haloJumpCooldown = 300;
 TRA_vehicleParaOpenHeight = 500;
+
+
+
+

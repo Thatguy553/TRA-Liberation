@@ -4,7 +4,13 @@ class TRA {
 
 		class initZones 		{};
 	};
-	
+	class functions_fob{
+		file = "functions\fob";
+		
+		class addActions			{};
+		class addResources			{};
+		class removeResources		{};
+	};
 	class functions_zones {
 		file = "functions\zones";
 
