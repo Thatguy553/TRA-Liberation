@@ -57,6 +57,7 @@ class HaloJumpGui
 			h = 0.056 * safezoneH;
 
 			colorBackground[] = {0,0,0,0.7};
+			onButtonClick = "closeDialog 1";
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END
