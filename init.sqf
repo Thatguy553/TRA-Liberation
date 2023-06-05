@@ -8,6 +8,7 @@
 
 // Init addActions 
 
-[TRA_playerFobPrefix] call TRA_fnc_addActions;
+[TRA_fobObj] call TRA_fnc_addActions;
+
 
 
