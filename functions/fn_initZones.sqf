@@ -67,7 +67,7 @@ _village =  [];
 	// Create trigger
 	_trigger = createTrigger["EmptyDetector", getMarkerPos _x, true];
 	_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
-	_trigger setTriggerArea [TRA_milActivationRadius / 2, TRA_milActivationRadius / 2, 0, true];
+	_trigger setTriggerArea [TRA_milActivationRadius, TRA_milActivationRadius, 0, true];
 	// Set Trigger Statements
 	_trigger setTriggerStatements
 	[
