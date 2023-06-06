@@ -35,14 +35,18 @@ Author:
 params ["_trigger", "_marker"];
 private ["_timerStart", "_deactivate"];
 diag_log format["[TRA] Deactivating Zone: %1", markerText _marker];
+// timer set to time script was called
 _timerStart = diag_tickTime;
 
+// as long as the zone still has no players in it, loop
 while {!(triggerActivated _trigger)} do {
+	// If the zone still has no players in it after TRA_zoneInactiveTime seconds, break
 	if ((diag_tickTime - _timerStart) >= TRA_zoneInactiveTime) exitWith {};
 	diag_log format["[TRA] Time Since Deactivation: %1", (diag_tickTime - _timerStart)];
 	sleep 5;
 };
 
+// check if loop broke because of players entering trigger again, if so dont deactivate zone.
 if (triggerActivated _trigger) exitWith {
 	diag_log "[TRA] Deactivation Aborted";
 	false
@@ -51,8 +55,11 @@ if (triggerActivated _trigger) exitWith {
 /* Zone certainly no longer active, set to false and delete all units */
 _trigger setVariable [format["%1%2", _marker, "_active"], false];
 
+// Get units stored on trigger for zone
 _zoneUnits = _trigger getVariable format["%1%2", _marker, "_units"];
 _zoneUnitsCount = count(_zoneUnits);
+
+// Delete all the units found to be stored on zone trigger
 {
 	// Current result is saved in variable _x
 	if (_x isKindOf "man") then {
@@ -66,7 +73,11 @@ _zoneUnitsCount = count(_zoneUnits);
 		deleteVehicle _x;
 	};
 } forEach (_zoneUnits);
+
+// Remove the number of deleted ai from total active ai
 TRA_activeAi = TRA_activeAi - _zoneUnitsCount;
+
+// Remove this zone from the total zones active (going to rewrite later)
 TRA_zonesActive = TRA_zonesActive - 1;
 diag_log format["[TRA] Zone Deactivated: %1", markerText _marker];
 true
