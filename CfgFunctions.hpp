@@ -37,6 +37,7 @@ class TRA {
 		class build					{};
 		class buildFob				{};
 		class buildMenu				{};
+		class objectInit			{};
 	};
 
 	class functions_helpers {

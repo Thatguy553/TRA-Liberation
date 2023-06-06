@@ -140,6 +140,7 @@ TRA_rotateObject = {
             detach TRA_buildObject;
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
             [TRA_buildObject] call TRA_fnc_addCurators;
+            [TRA_buildObject] call TRA_fnc_objectInit;
             TRA_buildSuccess = true;
             ["BuildSuccess", [format["%1 Built!", TRA_objectName]]] call BIS_fnc_showNotification;
         };

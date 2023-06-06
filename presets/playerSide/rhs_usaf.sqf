@@ -4,13 +4,12 @@ TRA_playerStructures set [
 	"Land_Cargo_HQ_V1_F"
 ];
 
-// TRA_playerStructures set [
-// 	"logistics",
-// 	[
-// 		["unique_class", [_cost, _cost, _cost]],
-// 		["unique_class", [_cost, _cost, _cost]]
-// 	]
-// ];
+TRA_playerStructures set [
+	"logistics",
+	[
+		["B_Slingload_01_Cargo_F", [300, 100, 200]]
+	]
+];
 
 
 /******************************************
@@ -100,7 +99,27 @@ TRA_playerVehicles set [
 	]
 ];
 TRA_playerVehicles set [
-	"veh_aircraft",
+	"veh_helicopters",
+	[
+		["RHS_MELB_AH6M",									[300, 0, 200]],
+		["RHS_MELB_MH6M",									[300, 0, 200]],
+		["RHS_MELB_H6M", 									[300, 0, 200]],
+		["RHS_AH64D_wd",									[500, 600, 300]],
+		["RHS_CH_47F",										[350, 100, 350]],
+		["RHS_UH60M",										[300, 100, 250]],
+		["RHS_UH60M_ESSS",									[350, 300, 300]],
+		["RHS_UH60M_MEV2",									[300, 0, 300]],
+		["RHS_UH60M_MEV",									[250, 0, 250]],
+		["RHS_AH1Z_wd",										[400, 500, 250]],
+		["rhsusf_CH53E_USMC",								[400, 0, 300]],
+		["rhsusf_CH53E_USMC_GAU21",							[400, 100, 300]],
+		["RHS_UH1Y_FFAR",									[250, 200, 200]],
+		["RHS_UH1Y",										[250, 100, 200]],
+		["RHS_UH1Y_UNARMED",								[200, 0, 200]]
+	]
+];
+TRA_playerVehicles set [
+	"veh_jets",
 	[
 		["RHS_MELB_AH6M",									[300, 0, 200]],
 		["RHS_MELB_MH6M",									[300, 0, 200]],
@@ -128,13 +147,6 @@ TRA_playerVehicles set [
 // ];
 // TRA_playerVehicles set [
 // 	"static",
-// 	[
-// 		["unique_class", [_cost, _cost, _cost]],
-// 		["unique_class", [_cost, _cost, _cost]]
-// 	]
-// ];
-// TRA_playerVehicles set [
-// 	"logistics",
 // 	[
 // 		["unique_class", [_cost, _cost, _cost]],
 // 		["unique_class", [_cost, _cost, _cost]]

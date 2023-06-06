@@ -109,6 +109,8 @@ TRA_haloJumpHeight = 1000;
 TRA_haloJumpCooldown = 300;
 TRA_vehicleParaOpenHeight = 500;
 
+/* Build Menu Object Init Code */
+TRA_buildObjectInits = createHashMap;
 
 
 
