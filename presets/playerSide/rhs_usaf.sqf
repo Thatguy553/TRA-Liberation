@@ -1,3 +1,37 @@
+TRA_playerStartBase insert [
+	[
+		"littlebird",
+		"RHS_MELB_MH6M"
+	],
+	[
+		"blackhawk",
+		"RHS_UH60M_d"
+	],
+	[
+		"mobile_respawn",
+		"rhsusf_CH53E_USMC"
+	],
+	[
+		"fixedwing",
+		"JS_JC_FA18E"
+	],
+	[
+		"fob_container",
+		"B_Slingload_01_Cargo_F"
+	],
+	[
+		"boat",
+		"B_T_Boat_Armed_01_minigun_F"
+	]
+];
+/******************************************
+	Vehicle Format:
+	["vehicle_class", [supply, ammo, fuel]]
+
+	Example:
+	["rhsusf_m1045_w_s", [200, 200, 50]],
+
+*******************************************/
 TRA_playerStructures set [
 	"struct_fob",
 	/* HQ Class */
@@ -10,16 +44,6 @@ TRA_playerStructures set [
 		["B_Slingload_01_Cargo_F", [300, 100, 200]]
 	]
 ];
-
-
-/******************************************
-	Vehicle Format:
-	["vehicle_class", [supply, ammo, fuel]]
-
-	Example:
-	["rhsusf_m1045_w_s", [200, 200, 50]],
-
-*******************************************/
 
 TRA_playerVehicles set [
 	"veh_light",

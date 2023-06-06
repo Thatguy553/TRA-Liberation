@@ -63,6 +63,7 @@ class TRA {
 		class heal					{};
 		class redeployMenu			{};
 		class redeploy				{};
+		class loadCarrier			{};
 	};
 
 	class persistence {

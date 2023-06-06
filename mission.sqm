@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=635;
+		nextID=640;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={22015.02,53.908165,4997.5366};
-		dir[]={-0.26707634,-0.59960359,0.75441748};
-		up[]={-0.2001006,0.80029714,0.56522936};
-		aside[]={0.94267172,0,0.33372146};
+		pos[]={23387.633,59.968033,5247.1606};
+		dir[]={0.85966152,-0.50925511,0.040513109};
+		up[]={0.50869054,0.86061561,0.023972966};
+		aside[]={0.047074571,0,-0.99889135};
 	};
 };
 binarizationWanted=0;
@@ -2292,17 +2292,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={23467.297,24.89035,5251.6812};
+						position[]={23467.297,24.889877,5251.6812};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
-						name="huronspawn";
+						name="mobile_respawn";
 					};
 					id=614;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=5.7220459e-006;
+					atlOffset=204.47998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2392,16 +2391,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={23399.105,24.861237,5259.2915};
+						position[]={23399.105,24.860931,5259.292};
+						angles[]={0,6.1811538,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						name="base_boxspawn";
+						name="fob_contrainer";
 					};
 					id=617;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=195.52831;
+					atlOffset=195.52802;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2442,20 +2442,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={23423.012,24.890213,5227.5884};
+						position[]={23423.012,24.890472,5227.5879};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
-						name="a10_0";
+						name="fixedwing_0";
 					};
 					id=627;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=13.875139;
+					atlOffset=0.00025749207;
 				};
 			};
 			id=632;
-			atlOffset=197.64352;
+			atlOffset=197.64362;
 		};
 		class Item153
 		{

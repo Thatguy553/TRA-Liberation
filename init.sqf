@@ -5,7 +5,8 @@
 
 // Init Zones
 [] call TRA_fnc_initZones;
-
+// Init Carrier
+[] call TRA_fnc_loadCarrier;
 
 
 
