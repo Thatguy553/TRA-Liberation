@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={23413.98,172.18857,5097.7563};
-		dir[]={0.10376428,-0.44831231,0.88783389};
-		up[]={0.05204162,0.89387703,0.44528148};
-		aside[]={0.99323952,0,-0.11608341};
+		pos[]={23449.75,26.545792,5309.3105};
+		dir[]={0.71846449,-0.32733604,-0.61375976};
+		up[]={0.24889381,0.94490618,-0.2126212};
+		aside[]={-0.64954424,-6.6123903e-008,-0.76035291};
 	};
 };
 binarizationWanted=0;
@@ -2009,7 +2009,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={23395.01,26.244766,5330.3838};
-						angles[]={-0,4.6886816,6.2826972};
+						angles[]={0,4.6886816,6.2826972};
 					};
 					side="Empty";
 					class Attributes
@@ -2025,7 +2025,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={23395.307,26.247269,5323.8359};
-						angles[]={-0,4.7047567,6.2826972};
+						angles[]={0,4.7047567,6.2826972};
 					};
 					side="Empty";
 					class Attributes
@@ -2041,7 +2041,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={23394.998,26.245346,5317.3638};
-						angles[]={-0,4.6986856,6.2826972};
+						angles[]={0,4.6986856,6.2826972};
 					};
 					side="Empty";
 					flags=4;
@@ -2076,7 +2076,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={23463.898,28.853483,5286.2871};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					class Attributes
@@ -2210,17 +2210,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={23449.957,24.876907,5317.9282};
+						position[]={23452.189,24.876678,5307.2764};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="operation_base";
 					};
 					id=612;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=0.00022506714;
+					atlOffset=203.46939;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2245,7 +2244,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={23395.049,26.804901,5335.9546};
-						angles[]={-0,1.5239284,6.2826972};
+						angles[]={0,1.5239284,6.2826972};
 					};
 					side="Empty";
 					class Attributes
@@ -2427,7 +2426,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={23397.115,24.876678,5290.229};
-						angles[]={-0,1.5281056,0};
+						angles[]={0,1.5281056,0};
 					};
 					side="Empty";
 					class Attributes
@@ -2456,7 +2455,7 @@ class Mission
 				};
 			};
 			id=632;
-			atlOffset=197.64365;
+			atlOffset=197.64352;
 		};
 		class Item153
 		{

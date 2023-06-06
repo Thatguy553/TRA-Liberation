@@ -114,6 +114,7 @@ TRA_vehicleParaOpenHeight = 500;
 
 /* Temporary Code Placement */
 private _fobs = TRA_playerFobs getOrDefault ["fobs", []];
+[operation_base] call TRA_fnc_addActionsFob;
 _fobs pushBack ["operation_base", operation_base];
 TRA_playerFobs set [
 	"fobs",
