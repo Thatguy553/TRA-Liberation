@@ -128,19 +128,23 @@ TRA_rotateFOB = {
 
             // Close the controls popup
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
-            
-            // Add fob to the list of fobs and generate the new fob name
+
+
             _fobs = TRA_playerFobs get "fobs";
             /* Minus one because of Operations Base */
             _fobNum = count(_fobs) - 1;
             _fobVarName = format["%1_%2_%3", toLower TRA_playerFobPrefix, _fobNum, toLower (TRA_playerFobNames select _fobNum)];
             _fobMarkerName = format["%1_marker", _fobVarName];
+
             createMarker [_fobMarkerName, position TRA_fobObject, 0];
+
             _fobMarkerName setMarkerTypeLocal "b_hq";
             _fobMarkerName setMarkerColorLocal "ColorWEST";
             _fobMarkerName setMarkerText format["%1 %2", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)];
+
             TRA_fobObject setVehicleVarName _fobVarName;
             _fobs pushBack [_fobVarName, TRA_fobObject];
+
             TRA_playerFobs set [
                 "fobs",
                 _fobs
@@ -148,9 +152,11 @@ TRA_rotateFOB = {
 
             // Add FOB object to zeus and signal success
             [TRA_fobObject] call TRA_fnc_addCurators;
+
             // Add fob actions to building.
             [TRA_fobObject] call TRA_fnc_addActionsFob;
             TRA_fobSuccess = true;
+
 
             ["BuildSuccess", [format["%1 %2 Built!", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)]]] remoteExec ["BIS_fnc_showNotification", 0];
         };
@@ -168,7 +174,7 @@ TRA_rotateFOB = {
         _player = attachedTo TRA_fobObject;
         TRA_fobObject attachTo [_player, [0, _distance, _height]];
         TRA_fobObject setDir TRA_fobRotation;
-        
+
     };
 
     TRA_fobRotation = _rotation;

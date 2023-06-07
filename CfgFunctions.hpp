@@ -6,7 +6,7 @@ class TRA {
 	};
 	class functions_fob{
 		file = "functions\fob";
-		
+
 		class addActionsFob			{};
 		class addResources			{};
 		class removeResources		{};

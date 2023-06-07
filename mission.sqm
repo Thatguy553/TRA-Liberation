@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={23387.633,59.968033,5247.1606};
-		dir[]={0.85966152,-0.50925511,0.040513109};
-		up[]={0.50869054,0.86061561,0.023972966};
-		aside[]={0.047074571,0,-0.99889135};
+		pos[]={22168.732,249.08586,5038.7695};
+		dir[]={-0.41674915,-0.90378028,-0.097475156};
+		up[]={-0.8800292,0.42799672,-0.20583361};
+		aside[]={-0.22774741,0,0.97372031};
 	};
 };
 binarizationWanted=0;
-sourceName="tra_liberation";
+sourceName="TRA-Liberation";
 addons[]=
 {
 	"A3_Ui_F",

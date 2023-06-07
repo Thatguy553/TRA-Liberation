@@ -28,3 +28,10 @@ _fobObject addAction [
 		[_caller] call TRA_fnc_haloMenu;
 	}
 ];
+_fobObject addAction[
+	"Redeploy",
+	{
+		params ["_target", "_caller"];
+		[_caller] call TRA_fnc_redeployMenu;
+	}
+];
