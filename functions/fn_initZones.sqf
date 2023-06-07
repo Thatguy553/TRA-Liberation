@@ -71,7 +71,7 @@ _village =  [];
 	// Set Trigger Statements
 	_trigger setTriggerStatements
 	[
-		format["this && (thisTrigger getVariable ['%1%2', false] isEqualTo false) && (TRA_zonesActive < TRA_maxZonesActive) && (TRA_activeAi < TRA_maxAiActive)", _x, '_active'],
+		format["this && (TRA_zonesActive < TRA_maxZonesActive) && (TRA_activeAi < TRA_maxAiActive)", _x, '_active'],
 		format["[thisTrigger, %1] spawn TRA_fnc_spawnMilitary;", str _x],
 		format["[thisTrigger, %1] spawn TRA_fnc_deactivateZone;", str _x]
 	];

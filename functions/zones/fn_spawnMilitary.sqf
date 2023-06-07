@@ -25,6 +25,10 @@ Author:
 ---------------------------------------------------------------------------- */
 params ["_trigger", "_marker"];
 diag_log format["[TRA] Activating Military Zone: %1", markerText _marker];
+private _active = _trigger getVariable ['%1%2', false];
+if (_active) exitWith {
+	diag_log format["[TRA] Zone %1 already active", markerText _marker];
+};
 
 /* Total ai should be distributed equally among max amount of zones active */
 private _aiLimit = round(TRA_maxAiActive / TRA_maxZonesActive);
@@ -154,3 +158,4 @@ _trigger setVariable [format["%1%2", _marker, "_active"], true];
 TRA_activeAi = TRA_activeAi + count(_unitObjs);
 
 TRA_zonesActive = TRA_zonesActive + 1;
+
