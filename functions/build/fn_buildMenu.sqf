@@ -93,7 +93,7 @@ private _choices = [
 	],
 	"SELECT", // reverts to default
 	""  // reverts to default, disable cancel option
-] call CAU_UserInputMenus_fnc_listbox;	
+] call CAU_UserInputMenus_fnc_listbox;
 
 
 TRA_menuLightVeh = {
@@ -130,7 +130,7 @@ TRA_menuLightVeh = {
 		],
 		"BUILD", // reverts to default
 		""  // reverts to default, disable cancel option
-	] call CAU_UserInputMenus_fnc_listbox;	
+	] call CAU_UserInputMenus_fnc_listbox;
 };
 
 TRA_menuHeavyVeh = {
@@ -167,7 +167,7 @@ TRA_menuHeavyVeh = {
 		],
 		"BUILD", // reverts to default
 		""  // reverts to default, disable cancel option
-	] call CAU_UserInputMenus_fnc_listbox;	
+	] call CAU_UserInputMenus_fnc_listbox;
 };
 
 TRA_menuHelicopters = {
@@ -204,7 +204,7 @@ TRA_menuHelicopters = {
 		],
 		"BUILD", // reverts to default
 		""  // reverts to default, disable cancel option
-	] call CAU_UserInputMenus_fnc_listbox;	
+	] call CAU_UserInputMenus_fnc_listbox;
 };
 
 TRA_menuLogistics = {
@@ -241,5 +241,5 @@ TRA_menuLogistics = {
 		],
 		"BUILD", // reverts to default
 		""  // reverts to default, disable cancel option
-	] call CAU_UserInputMenus_fnc_listbox;	
+	] call CAU_UserInputMenus_fnc_listbox;
 };
