@@ -129,7 +129,7 @@ TRA_rotateFOB = {
             // Close the controls popup
             (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
 
-
+	    // Add fob to the list of fobs and generate the new fob name	
             _fobs = TRA_playerFobs get "fobs";
             /* Minus one because of Operations Base */
             _fobNum = count(_fobs) - 1;
