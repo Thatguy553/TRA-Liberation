@@ -234,7 +234,7 @@ TRA_menuLogistics = {
 		[{
 			params["_player"];
 			private _parsedData = parseSimpleArray _data;
-			private _success = [_player, _parsedData select 0, _parsedData select 1, false] spawn TRA_fnc_buildFob;
+			private _success = [_player, _parsedData select 0, _parsedData select 1, false] spawn TRA_fnc_build;
 			_success
 		},
 		[_player]
