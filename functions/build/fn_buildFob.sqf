@@ -39,6 +39,13 @@ params["_player", "_container"];
 private _building = TRA_playerStructures get "struct_fob";
 private _fobObj = createVehicle[_building, [1, 1, 1000], [], 0, "NONE"];
 
+/* Move FOB container out of sight */
+TRA_fobContainer = _container;
+TRA_fobContainerPos = getPosATL _container;
+_container setPosATL [0,0,1000];
+_container enableSimulation false;
+_container allowDamage false;
+
 /* Attach object to player */
 TRA_fobBuildDist = 20;
 _fobObj attachTo[_player, [0, TRA_fobBuildDist, 0]];
@@ -74,7 +81,8 @@ TRA_rotateFOB = {
     params["_display", "_key", "_shift", "_ctrl", "_alt"];
     if (isNil 'TRA_fobObject') exitWith {
         systemChat "Fob object was not set as a missionNamespace variable";
-        false;
+        ["", "", "", "", "", true] call TRA_cancelRotation;
+        false
     };
 
     /* Free other keys */
@@ -148,8 +156,13 @@ TRA_rotateFOB = {
 
             // Add FOB object to zeus and signal success
             [TRA_fobObject] call TRA_fnc_addCurators;
+
             // Add fob actions to building.
             [TRA_fobObject] call TRA_fnc_addActionsFob;
+            
+            /* Delete FOB container */
+            deleteVehicle TRA_fobContainer;
+
             TRA_fobSuccess = true;
 
             ["BuildSuccess", [format["%1 %2 Built!", TRA_playerFobPrefix, (TRA_playerFobNames select _fobNum)]]] remoteExec ["BIS_fnc_showNotification", 0];
@@ -179,8 +192,8 @@ TRA_rotateFOB = {
 };
 
 TRA_cancelRotation = {
-    params["_display", "_key", "_shift", "_ctrl", "_alt"];
-    if (_key isNotEqualTo 1) exitWith {
+    params["_display", "_key", "_shift", "_ctrl", "_alt", "_altCancel"];
+    if (_key isNotEqualTo 1 && !_altCancel) exitWith {
         false
     };
 
@@ -189,6 +202,9 @@ TRA_cancelRotation = {
     detach TRA_fobObject;
     deleteVehicle TRA_fobObject;
     (uiNamespace getVariable "TRA_buildControls") ctrlSetText ("");
+    TRA_fobContainer setPosATL TRA_fobContainerPos;
+    TRA_fobContainer enableSimulation true;
+    TRA_fobContainer allowDamage true;
     TRA_fobSuccess = false;
     ["BuildCanceled", ["Building FOB Canceled"]] call BIS_fnc_showNotification;
 
