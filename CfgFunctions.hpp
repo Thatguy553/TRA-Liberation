@@ -66,11 +66,19 @@ class TRA {
 		class loadCarrier			{};
 	};
 
-	class persistence {
+	class functions_persistence {
 		file = "functions\persistence";
 
 		class load					{};
 		class save					{};
+	};
+
+	class functions_ai {
+		file = "functions\ai";
+
+		class spawnGarrison			{};
+		class spawnPatrol			{};
+		class spawnVehicle			{};
 	}
 };
 

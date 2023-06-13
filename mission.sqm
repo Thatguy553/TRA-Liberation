@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=640;
+		nextID=642;
 	};
 	class MarkerIDProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class LayerIndexProvider
 	{
-		nextID=3;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={23387.633,59.968033,5247.1606};
-		dir[]={0.85966152,-0.50925511,0.040513109};
-		up[]={0.50869054,0.86061561,0.023972966};
-		aside[]={0.047074571,0,-0.99889135};
+		pos[]={21056.273,103.38616,5725.1816};
+		dir[]={-0.34205702,-0.42329898,0.83893692};
+		up[]={-0.15981676,0.90599,0.39197025};
+		aside[]={0.92598909,0,0.37755054};
 	};
 };
 binarizationWanted=0;
@@ -180,7 +180,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -243,7 +243,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=155;
+		items=156;
 		class Item0
 		{
 			dataType="Marker";
@@ -1914,7 +1914,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22015.758,26.018478,5024.0762};
+						position[]={21059.395,77.801575,5708.5698};
 					};
 					side="West";
 					flags=7;
@@ -1924,14 +1924,14 @@ class Mission
 					};
 					id=479;
 					type="B_Soldier_A_F";
-					atlOffset=1.9073486e-006;
+					atlOffset=-7.6293945e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=478;
-			atlOffset=1.9073486e-006;
+			atlOffset=-7.6293945e-006;
 		};
 		class Item149
 		{
@@ -2476,6 +2476,17 @@ class Mission
 			type="UK3CB_Marker_CW_US";
 			id=634;
 			atlOffset=178.49081;
+		};
+		class Item155
+		{
+			dataType="Marker";
+			position[]={21339.092,31.100082,6095.7734};
+			name="marker_4";
+			markerType="ELLIPSE";
+			type="";
+			a=50;
+			b=50;
+			id=641;
 		};
 	};
 };

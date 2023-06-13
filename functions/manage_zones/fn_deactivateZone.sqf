@@ -24,7 +24,7 @@ Returns:
 
 Examples:
     (begin example)
-	[_trigger, "zone_marker"] call TRA_fnc_resourceCheck;
+	[_trigger, "zone_marker"] call TRA_fnc_deactivateZone;
     (end)
 
 Author:
@@ -78,6 +78,6 @@ _zoneUnitsCount = count(_zoneUnits);
 TRA_activeAi = TRA_activeAi - _zoneUnitsCount;
 
 // Remove this zone from the total zones active (going to rewrite later)
-TRA_zonesActive = TRA_zonesActive - 1;
+TRA_zonesActive = TRA_zonesActive - [_marker];
 diag_log format["[TRA] Zone Deactivated: %1", markerText _marker];
 true
