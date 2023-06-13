@@ -15,10 +15,12 @@ TRA_spawnVehicles = {
 
 		_veh = createVehicle [_vehClass, [0,0,1000], [], 0, "NONE"];
 		_veh enableSimulation false;
-		// _veh allowDamage false;
+
 		_veh setVectorDir _padVector;
 		_veh setPosASL [_padPos select 0, _padPos select 1, (_padPos select 2) + 3];
 		_veh enableSimulation true;
+
+		[_veh] call TRA_fnc_objectInit;
 		_index = _index + 1;
 	};
 };

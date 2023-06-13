@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21056.273,103.38616,5725.1816};
-		dir[]={-0.34205702,-0.42329898,0.83893692};
-		up[]={-0.15981676,0.90599,0.39197025};
-		aside[]={0.92598909,0,0.37755054};
+		pos[]={23266.416,148.10106,5331.0757};
+		dir[]={0.81931049,-0.52636975,-0.22729981};
+		up[]={0.5072124,0.85025573,-0.140715};
+		aside[]={-0.26733109,0,-0.96360469};
 	};
 };
 binarizationWanted=0;
@@ -2297,7 +2297,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						name="mobile_respawn";
+						name="mobile_respawn_0";
 					};
 					id=614;
 					type="Land_ClutterCutter_small_F";
@@ -2397,7 +2397,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						name="fob_contrainer";
+						name="fob_container_0";
 					};
 					id=617;
 					type="Land_ClutterCutter_small_F";

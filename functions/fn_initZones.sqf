@@ -64,12 +64,13 @@ _village =  [];
 } forEach TRA_Markers;
 
 {
+	// Create Zone Area Marker
+	_marker = createMarker [format["%1_ellipse", _x], getMarkerPos _x, 1];
+	_marker setMarkerSize [TRA_milCaptureRadius, TRA_milCaptureRadius];
+	_marker setMarkerShape "ELLIPSE";
+	_marker setMarkerColor "ColorGrey";
+
 	// Create trigger
-	// _marker = createMarker [format["%1_ellipse", _x], getMarkerPos _x, 1];
-	// _marker setMarkerSize [TRA_milCaptureRadius, TRA_milCaptureRadius];
-	// _marker setMarkerType "ELLIPSE";
-	// _marker setMarkerColor "ColorWEST";
-	// _marker setMarkerText "test";
 	_trigger = createTrigger["EmptyDetector", getMarkerPos _x, true];
 	_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 	_trigger setTriggerArea [TRA_milActivationRadius, TRA_milActivationRadius, 0, true];
